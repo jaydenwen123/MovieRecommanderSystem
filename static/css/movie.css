@@ -1,0 +1,42 @@
+.movie_list ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.movie_list ul li {
+    list-style: none;
+    display: block;
+    float: left;
+    border: 1px solid lightgray;
+    margin-left: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie_list ul li img {
+    width: 120px;
+    height: 150px;
+}
+
+.movie_title {
+    margin-top: 6px;
+}
+
+.search {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.movie_detail {
+    padding-left: 0px;
+}
+
+.movie_detail ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.movie_detail ul li {
+    margin-left: 0px;
+}
+

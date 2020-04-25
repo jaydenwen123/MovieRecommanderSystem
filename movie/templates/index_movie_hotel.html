@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <link href="{% static 'css/movie.css' %}" rel="stylesheet">
+</head>
+<body>
+<!--引入头部文件-->
+{% include "header.html" %}
+<!--border: 1px solid red;-->
+
+<div class="container" style="margin-top: 0px;">
+    <div class="row" style="">
+        <!--logo图标-->
+        <div class="col-md-8" style="">
+            <!--正在热映的电影-->
+            <div class="row" style="margin-top: 20px;margin-left: 13px; ">
+                <div class="row float-left" style="">
+                    <div class="col-md-10">
+                        <span style="font-weight: bold;">正在热映</span>
+                        <a target="_blank" href="www.baidu.com">全部正在热映>></a>
+                        <a target="_blank" href="www.baidu.com">即将上映>></a>
+                    </div>
+                    <div class="col-md-2" style="">
+                        <a target="_blank" href="www.baidu.com">更多>></a>
+                    </div>
+                </div>
+                <div class="row movie_list" style="margin-left: 0px;">
+
+                    <div>
+                        <ul>
+                            {% for movie in  movie_list %}
+                                <li>
+                                    <a target="_blank" href="detail/{{ movie.movie_index }}/">
+                                        <img src="{{ movie.movie_poster }}">
+                                    </a>
+                                    <div class="movie_title"><a target="_blank"
+                                                                href="detail/{{ movie.movie_index }}/">{{ movie.movie_aliasname }}</a>
+                                    </div>
+                                    <p>评分5星</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--动作类型的电影 -->
+            <div class="row" style="margin-top: 20px;margin-left: 13px; ">
+                <div class="row float-left" style="">
+                    <div class="col-md-10">
+                        <span style="font-weight: bold;">动作电影</span>
+                        <a target="_blank" href="www.baidu.com">全部正在热映>></a>
+                        <a target="_blank" href="www.baidu.com">即将上映>></a>
+                    </div>
+                    <div class="col-md-2" style="">
+                        <a target="_blank" href="www.baidu.com">更多>></a>
+                    </div>
+                </div>
+                <div class="row movie_list" style="margin-top: 20px; margin-left:0px;">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="detail/2/">
+                                <img src="{% static 'image/一吻定情.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="detail/2/">一吻定情</a></div>
+                            <p>评分5星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/新喜剧之王.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">新喜剧之王</a></div>
+                            <p>评分4星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/疯狂的外星人.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">疯狂的外星人</a></div>
+                            <p>评分5星</p>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/逃离地球.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">逃离地球</a></div>
+                            <p>评分5星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/飞驰人生.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">飞驰人生</a></div>
+                            <p>评分5星</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--浪漫类型的电影-->
+            <div class="row" style="margin-top: 20px;margin-left: 13px; ">
+                <div class="row float-left" style="">
+                    <div class="col-md-10">
+                        <span style="font-weight: bold;">爱情电影</span>
+                        <a target="_blank" href="www.baidu.com">全部正在热映>></a>
+                        <a target="_blank" href="www.baidu.com">即将上映>></a>
+                    </div>
+                    <div class="col-md-2" style="">
+                        <a target="_blank" href="www.baidu.com">更多>></a>
+                    </div>
+                </div>
+                <div class="row movie_list" style="margin-top: 20px;margin-left: 0px; ">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="detail/2/">
+                                <img src="{% static 'image/一吻定情.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="detail/2/">一吻定情</a></div>
+                            <p>评分5星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/新喜剧之王.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">新喜剧之王</a></div>
+                            <p>评分4星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/疯狂的外星人.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">疯狂的外星人</a></div>
+                            <p>评分5星</p>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/逃离地球.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">逃离地球</a></div>
+                            <p>评分5星</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="www.baidu.com">
+                                <img src="{% static 'image/飞驰人生.jpg' %}">
+                            </a>
+                            <div class="movie_title"><a target="_blank" href="www.baidu.com">飞驰人生</a></div>
+                            <p>评分5星</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4" style="margin-top: 8px;">
+            <div class="row">
+                <div class="col-md-12" style="">
+                    <img style="margin-left: 23px;" src="{% static 'image/advertisement.png' %}">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px; margin-left: 23px;">
+                <div class="" style="margin-bottom: 10px;">
+                    <span style="font-weight: bold">一周口碑榜</span>
+                    <a target="_blank" href="www.baidu.com">更多榜单>></a>
+                </div>
+                <ul style="list-style: none; padding: 0px;">
+                    <li>
+                        <p>
+                            <span>1</span>
+                            <a target="_blank" href="www.baidu.com">一吻定情</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>2</span>
+                            <a target="_blank" href="www.baidu.com">新喜剧之王</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>3</span>
+                            <a target="_blank" href="www.baidu.com">疯狂的外星人</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>4</span>
+                            <a target="_blank" href="www.baidu.com">逃离地球</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>5</span>
+                            <a target="_blank" href="www.baidu.com">飞驰人生</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+            <!--广告-->
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12" style="">
+                    <img style="margin-left: 23px;" src="{% static 'image/advertisement2.jpg' %}">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px; margin-left: 23px;">
+                <div class="" style="margin-bottom: 10px;">
+                    <span style="font-weight: bold">评分最高榜</span>
+                    <a target="_blank" href="www.baidu.com">更多榜单>></a>
+                </div>
+                <ul style="list-style: none; padding: 0px;">
+                    <li>
+                        <p>
+                            <span>1</span>
+                            <a target="_blank" href="www.baidu.com">一吻定情</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>2</span>
+                            <a target="_blank" href="www.baidu.com">新喜剧之王</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>3</span>
+                            <a target="_blank" href="www.baidu.com">疯狂的外星人</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>4</span>
+                            <a target="_blank" href="www.baidu.com">逃离地球</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>5</span>
+                            <a target="_blank" href="www.baidu.com">飞驰人生</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--正在热映的电影
+    <div class="container" style="margin-top: 20px;margin-left: 15px;">
+        <div class="row float-left">
+            <span style="font-weight: bold;">正在热映</span>
+            <a target="_blank" href="www.baidu.com">全部正在热映>></a>
+            <a target="_blank" href="www.baidu.com">即将上映>></a>
+        </div>
+        <div class="row movie_list" style="margin-top: 20px;">
+            <ul>
+                <li>
+                    <a target="_blank" href="detail/2/">
+                        <img src="{% static 'image/一吻定情.jpg' %}">
+                    </a>
+                    <div class="movie_title"><a target="_blank" href="detail/2/">一吻定情</a></div>
+                    <p>评分5星</p>
+                </li>
+                <li>
+                    <a target="_blank" href="www.baidu.com">
+                        <img src="{% static 'image/新喜剧之王.jpg' %}">
+                    </a>
+                    <div class="movie_title"><a target="_blank" href="www.baidu.com">新喜剧之王</a></div>
+                    <p>评分4星</p>
+                </li>
+                <li>
+                    <a target="_blank" href="www.baidu.com">
+                        <img src="{% static 'image/疯狂的外星人.jpg' %}">
+                    </a>
+                    <div class="movie_title"><a target="_blank" href="www.baidu.com">疯狂的外星人</a></div>
+                    <p>评分5星</p>
+                </li>
+
+                <li>
+                    <a target="_blank" href="www.baidu.com">
+                        <img src="{% static 'image/逃离地球.jpg' %}">
+                    </a>
+                    <div class="movie_title"><a target="_blank" href="www.baidu.com">逃离地球</a></div>
+                    <p>评分5星</p>
+                </li>
+                <li>
+                    <a target="_blank" href="www.baidu.com">
+                        <img src="{% static 'image/飞驰人生.jpg' %}">
+                    </a>
+                    <div class="movie_title"><a target="_blank" href="www.baidu.com">飞驰人生</a></div>
+                    <p>评分5星</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    -->
+
+</div>
+
+
+</body>
+</html>
